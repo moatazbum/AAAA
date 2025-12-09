@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bros Gym - Login & Sign Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="decoration.css">
+</head>
+<body>
+  <!-- Custom Message Modal -->
+  <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center py-4">
+          <div id="messageIcon" class="message-icon mb-3"></div>
+          <h5 id="messageTitle" class="modal-title mb-2"></h5>
+          <p id="messageText" class="text-muted mb-0"></p>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <div class="header">
+        <h1 class="gym-title">💪 BROS GYM</h1>
+        <p class="gym-tagline">Build Your Strongest Self</p>
+      </div>
+
+      <ul class="nav nav-tabs nav-fill" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="false">Sign Up</button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4">
+        <!-- Login Tab -->
+        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email Address</label>
+              <input type="email" class="form-control form-control-lg" id="loginEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <div class="password-input-group">
+                <input type="password" class="form-control form-control-lg" id="loginPassword" placeholder="Enter your password" required>
+                <button type="button" class="btn-show-password" id="loginShowPassword">Show</button>
+              </div>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100 gym-btn">Login</button>
+            <p class="text-center mt-3">
+              <a href="#" class="forgot-password">Forgot your password?</a>
+            </p>
+          </form>
+        </div>
+
+        <!-- Sign Up Tab -->
+        <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+          <form id="signupForm">
+            <div class="mb-3">
+              <label for="signupName" class="form-label">Full Name</label>
+              <input type="text" class="form-control form-control-lg" id="signupName" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupEmail" class="form-label">Email Address</label>
+              <input type="email" class="form-control form-control-lg" id="signupEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupPhone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control form-control-lg" id="signupPhone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupPassword" class="form-label">Password</label>
+              <div class="password-input-group">
+                <input type="password" class="form-control form-control-lg" id="signupPassword" placeholder="Create a strong password" required>
+                <button type="button" class="btn-show-password" id="signupShowPassword">Show</button>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <div class="password-input-group">
+                <input type="password" class="form-control form-control-lg" id="confirmPassword" placeholder="Confirm your password" required>
+                <button type="button" class="btn-show-password" id="confirmShowPassword">Show</button>
+              </div>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+              <label class="form-check-label" for="agreeTerms">I agree to the Terms & Conditions</label>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg w-100 gym-btn">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
